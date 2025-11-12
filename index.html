@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 
+    ==================================================================
+    ==  PRIMARY SEO & METADATA
+    ==================================================================
+    -->
+    <title>FUBK Launchpad | Join the FUBK Flow Open Source Project</title>
+    <meta
+      name="description"
+      content="Become a contributor to FUBK Flow, the open-source student utility app for Federal University Birnin Kebbi. We're simplifying campus life. All skill levels welcome."
+    />
+    <meta name="author" content="FUBK Flow Team" />
+    <link rel="canonical" href="https://fubk-launchpad.netlify.app" />
+    <!-- UPDATE THIS WHEN YOU DEPLOY -->
+
+    <!-- Favicon (Using a simple SVG icon as a placeholder) -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>"
+    />
+
+    <!-- 
+    ==================================================================
+    ==  SOCIAL MEDIA / OPEN GRAPH (OG) TAGS
+    ==================================================================
+    -->
+    <meta
+      property="og:title"
+      content="FUBK Launchpad: Join the FUBK Flow Project"
+    />
+    <meta
+      property="og:description"
+      content="Become a contributor to FUBK Flow, the open-source student utility app for Federal University Birnin Kebbi."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fubk-launchpad.netlify.app" />
+    <!-- UPDATE THIS -->
+    <meta
+      property="og:image"
+      content="https://placehold.co/1200x630/ffffff/2563eb?text=FUBK%20Flow%20Launchpad&font=inter"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- 
+    ==================================================================
+    ==  TWITTER CARD TAGS
+    ==================================================================
+    -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="FUBK Launchpad: Join the FUBK Flow Project"
+    />
+    <meta
+      name="twitter:description"
+      content="Become a contributor to FUBK Flow, the open-source student utility app for FUBK. All skill levels welcome."
+    />
+    <meta
+      name="twitter:image"
+      content="https://placehold.co/1200x630/ffffff/2563eb?text=FUBK%20Flow%20Launchpad&font=inter"
+    />
+
+    <!-- 
+    ==================================================================
+    ==  STYLES & LIBRARIES
+    ==================================================================
+    -->
+    <!-- Mobile Browser Theme Color -->
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Tailwind CDN and Lucide Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Academic Font (Inter) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind Configuration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "fubk-accent": "#2563eb", // Deep blue
+              "fubk-bg": "#ffffff", // Pure white background for flat look
+              "fubk-text": "#1f2937", // Gray-800 for softer contrast
+              "fubk-muted": "#6b7280", // Gray-500 for secondary text
+              "fubk-border": "#e5e7eb", // Gray-200 for subtle borders
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            // *** THIS IS THE FIX ***
+            // Added the animation and keyframes for the scroller
+            animation: {
+              scroll: "scroll 40s linear infinite",
+            },
+            keyframes: {
+              scroll: {
+                "0%": { transform: "translateX(0)" },
+                "100%": { transform: "translateX(-100%)" },
+              },
+            },
+            // *** END OF FIX ***
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      }
+      .lucide {
+        width: 1.25em;
+        height: 1.25em;
+        stroke-width: 1.5;
+      }
+
+      /* Modern Typewriter Cursor */
+      #typewriter-text::after {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: #2563eb;
+        border-radius: 50%;
+        margin-left: 6px;
+        margin-bottom: 2px; /* Adjusted alignment */
+        animation: blink 1s step-start infinite;
+      }
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="bg-fubk-bg text-fubk-text font-sans min-h-screen antialiased selection:bg-blue-100 selection:text-blue-900"
+  >
+    <div class="max-w-5xl mx-auto px-6">
+      <!-- HEADER -->
+      <header
+        class="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-fubk-border flex items-center justify-between h-16 px-6 max-w-5xl mx-auto"
+      >
+        <div class="flex items-center space-x-3">
+          <img
+            src="assets/images/fubk-logo.jpg"
+            alt="FUBK Logo"
+            class="h-12 w-12 rounded-full"
+          />
+        </div>
+        <!-- Make sure to replace #github-link with your actual repository URL -->
+        <a
+          href="https://github.com/orgs/fubk-Flow/repositories"
+          class="group flex items-center px-3 py-1.5 text-sm font-medium text-fubk-muted bg-gray-50 border border-fubk-border rounded-lg hover:text-fubk-accent hover:border-fubk-accent/20 transition-colors duration-200"
+        >
+          <i
+            data-lucide="github"
+            class="lucide w-4 h-4 mr-2 group-hover:text-fubk-accent transition-colors"
+          ></i>
+          <span>Source Code</span>
+        </a>
+      </header>
+
+      <!-- HERO SECTION -->
+      <main class="text-center mb-24 md:mb-32 pt-24 md:pt-32">
+        <!-- Badge -->
+        <div
+          class="inline-flex items-center px-3 py-1 mb-6 rounded-md text-xs font-medium bg-blue-50 text-fubk-accent border border-blue-100"
+        >
+          <i data-lucide="sparkles" class="lucide w-3.5 h-3.5 mr-2"></i>
+          Open-Source Student Initiative
+        </div>
+
+        <!-- Headline -->
+        <h2
+          class="text-4xl md:text-5xl font-extrabold text-fubk-text tracking-tight mb-6 leading-tight"
+        >
+          Simplify Campus Life. <br class="hidden md:block" />
+          <span class="text-fubk-accent"> Build the Future. </span>
+        </h2>
+
+        <!-- Typewriter -->
+        <div class="flex justify-center mb-10 h-7">
+          <p class="text-lg text-fubk-muted font-mono flex items-center">
+            >
+            <span
+              id="typewriter-text"
+              class="ml-2 text-fubk-text font-medium"
+            ></span>
+          </p>
+        </div>
+
+        <!-- CTA BUTTONS (Flat & Clean) -->
+        <div
+          class="flex flex-col sm:flex-row justify-center items-center gap-4"
+        >
+          <a
+            href="apply.html"
+            class="w-full sm:w-auto inline-flex items-center justify-center py-3 px-6 text-base font-semibold text-white bg-fubk-accent rounded-lg hover:bg-blue-700 transition-colors duration-200"
+          >
+            Apply to Join Team
+            <i data-lucide="arrow-right" class="lucide ml-2 w-4 h-4"></i>
+          </a>
+          <a
+            href="#learn-more"
+            class="w-full sm:w-auto inline-flex items-center justify-center py-3 px-6 text-base font-semibold text-fubk-text bg-white border border-fubk-border rounded-lg hover:bg-gray-50 hover:border-gray-300 transition-colors duration-200"
+          >
+            Read Documentation
+          </a>
+        </div>
+      </main>
+
+      <!-- FEATURES (Flat Cards) -->
+      <section id="learn-more" class="mb-24">
+        <div class="text-center mb-12">
+          <h3 class="text-2xl font-bold text-fubk-text mb-3">
+            Why Contribute?
+          </h3>
+          <p class="text-base text-fubk-muted max-w-xl mx-auto">
+            We are building a legacy of student-led innovation at FUBK.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="p-6 bg-white rounded-xl border border-fubk-border hover:border-fubk-accent transition-colors duration-200"
+          >
+            <div
+              class="h-10 w-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i
+                data-lucide="terminal-square"
+                class="lucide text-fubk-accent w-5 h-5"
+              ></i>
+            </div>
+            <h4 class="text-base font-bold text-fubk-text mb-2">
+              Real-World Skills
+            </h4>
+            <p class="text-sm text-fubk-muted leading-relaxed">
+              Work directly with
+              <strong>React Native, Firebase, and Supabase</strong> in
+              production.
+            </p>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="p-6 bg-white rounded-xl border border-fubk-border hover:border-fubk-accent transition-colors duration-200"
+          >
+            <div
+              class="h-10 w-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i
+                data-lucide="users"
+                class="lucide text-fubk-accent w-5 h-5"
+              ></i>
+            </div>
+            <h4 class="text-base font-bold text-fubk-text mb-2">
+              PeerVerify System
+            </h4>
+            <p class="text-sm text-fubk-muted leading-relaxed">
+              Help build our unique, decentralized trust system for Class
+              Representatives.
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="p-6 bg-white rounded-xl border border-fubk-border hover:border-fubk-accent transition-colors duration-200"
+          >
+            <div
+              class="h-10 w-10 bg-blue-50 rounded-lg flex items-center justify-center mb-4"
+            >
+              <i
+                data-lucide="trophy"
+                class="lucide text-fubk-accent w-5 h-5"
+              ></i>
+            </div>
+            <h4 class="text-base font-bold text-fubk-text mb-2">
+              CV & Portfolio
+            </h4>
+            <p class="text-sm text-fubk-muted leading-relaxed">
+              Every line of code you contribute is public proof of your
+              collaborative skills.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TECH STACK SCROLLER -->
+      <section class="text-center mb-24 border-t border-fubk-border pt-16">
+        <p
+          class="text-xs font-bold text-fubk-muted uppercase tracking-widest mb-10"
+        >
+          Our Technology Stack
+        </p>
+
+        <!-- Scroller container with gradient mask -->
+        <!-- This is the gradient mask (the "fade" effect on the sides) -->
+        <div
+          class="w-full overflow-hidden"
+          style="
+            mask-image: linear-gradient(
+              to right,
+              transparent,
+              black 10%,
+              black 90%,
+              transparent
+            );
+          "
+        >
+          <!-- Inner container that animates -->
+          <div class="flex w-max animate-scroll">
+            <!-- List of tech (FIRST copy) -->
+            <ul class="flex justify-center items-center gap-6 px-3">
+              <li
+                class="flex items-center gap-2 px-5 py-3 bg-white border border-fubk-border rounded-lg text-gray-700 font-medium whitespace-nowrap"
+              >
+                <i data-lucide="atom" class="lucide text-sky-500"></i>React
+                Native
+              </li>
+              <li
+                class="flex items-center gap-2 px-5 py-3 bg-white border border-fubk-border rounded-lg text-gray-700 font-medium whitespace-nowrap"
+              >
+                <i data-lucide="smartphone" class="lucide text-gray-600"></i
+                >Expo
+              </li>
+              <li
+                class="flex items-center gap-2 px-5 py-3 bg-white border border-fubk-border rounded-lg text-gray-700 font-medium whitespace-nowrap"
+              >
+                <i data-lucide="flame" class="lucide text-orange-500"></i
+                >Firebase
+              </li>
+              <li
+                class="flex items-center gap-2 px-5 py-3 bg-white border border-fubk-border rounded-lg text-gray-700 font-medium whitespace-nowrap"
+              >
+                <i data-lucide="database" class="lucide text-emerald-500"></i
+                >Supabase
+              </li>
+              <li
+                class="flex items-center gap-2 px-5 py-3 bg-white border border-fubk-border rounded-lg text-gray-70Services-medium whitespace-nowrap"
+              >
+                <i data-lucide="code" class="lucide text-orange-600"></i>HTML5
+              </li>
+              <li
+                class="flex items-center gap-2 px-5 py-3 bg-white border border-fubk-border rounded-lg text-gray-700 font-medium whitespace-nowrap"
+              >
+                <i data-lucide="paint-brush" class="lucide text-blue-500"></i
+                >Tailwind CSS
+              </li>
+              <li
+                classIn="flex items-center gap-2 px-5 py-3 bg-white border border-fubk-border rounded-lg text-gray-700 font-medium whitespace-nowrap"
+              >
+                <i data-lucide="zap" class="lucide text-yellow-500"></i
+                >JavaScript
+              </li>
+              <li
+                class="flex items-center gap-2 px-5 py-3 bg-white border border-fubk-border rounded-lg text-gray-700 font-medium whitespace-nowrap"
+              >
+                <i data-lucide="git-branch" class="lucide text-fubk-text"></i
+                >Git / GitHub
+              </li>
+            </ul>
+
+            <!-- Duplicate of the list (for seamless looping) -->
+            <ul class="flex justify-center items-center gap-6 px-3">
+              <li
+                class="flex items-center gap-2 px-5 py-3 bg-white border border-fubk-border rounded-lg text-gray-700 font-medium whitespace-nowrap"
+              >
+                <i data-lucide="atom" class="lucide text-sky-500"></i>React
+                Native
+              </li>
+              <li
+                class="flex items-center gap-2 px-5 py-3 bg-white border border-fubk-border rounded-lg text-gray-700 font-medium whitespace-nowrap"
+              >
+                <i data-lucide="smartphone" class="lucide text-gray-600"></i
+                >Expo
+              </li>
+              <li
+                class="flex items-center gap-2 px-5 py-3 bg-white border border-fubk-border rounded-lg text-gray-700 font-medium whitespace-nowrap"
+              >
+                <i data-lucide="flame" class="lucide text-orange-500"></i
+                >Firebase
+              </li>
+              <li
+                class="flex items-center gap-2 px-5 py-3 bg-white border border-fubk-border rounded-lg text-gray-700 font-medium whitespace-nowrap"
+              >
+                <i data-lucide="database" class="lucide text-emerald-500"></i
+                >Supabase
+              </li>
+              <li
+                class="flex items-center gap-2 px-5 py-3 bg-white border border-fubk-border rounded-lg text-gray-700 font-medium whitespace-nowrap"
+              >
+                <i data-lucide="code" class="lucide text-orange-600"></i>HTML5
+              </li>
+              <li
+                class="flex items-center gap-2 px-5 py-3 bg-white border border-fubk-border rounded-lg text-gray-700 font-medium whitespace-nowrap"
+              >
+                <i data-lucide="paint-brush" class="lucide text-blue-500"></i
+                >Tailwind CSS
+              </li>
+              <li
+                class="flex items-center gap-2 px-5 py-3 bg-white border border-fubk-border rounded-lg text-gray-700 font-medium whitespace-nowrap"
+              >
+                <i data-lucide="zap" class="lucide text-yellow-500"></i
+                >JavaScript
+              </li>
+              <li
+                class="flex items-center gap-2 px-5 py-3 bg-white border border-fubk-border rounded-lg text-gray-700 font-medium whitespace-nowrap"
+              >
+                <i data-lucide="git-branch" class="lucide text-fubk-text"></i
+                >Git / GitHub
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-fubk-border bg-gray-50 py-12">
+      <div
+        class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="mb-6 md:mb-0 text-center md:text-left">
+          <p class="text-lg font-bold text-fubk-text">FUBK Flow</p>
+          <p class="text-xs text-fubk-muted mt-1">
+            Open-source student utility.
+          </p>
+        </div>
+        <div class="flex space-x-6 items-center">
+          <a
+            href="conduct.html"
+            class="text-xs font-medium text-fubk-muted hover:text-fubk-accent transition-colors"
+            >Code of Conduct</a
+          >
+          <a
+            href="privacy.html"
+            class="text-xs font-medium text-fubk-muted hover:text-fubk-accent transition-colors"
+            >Privacy Policy</a
+          >
+          <a
+            href="#"
+            class="text-fubk-muted hover:text-fubk-text transition-colors"
+          >
+            <span class="sr-only">GitHub</span>
+            <i data-lucide="github" class="lucide w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 
+    ==================================================================
+    ==  JAVASCRIPT (ALL IN ONE PLACE - FIXED)
+    ==  This script now correctly initializes icons AND the typewriter
+    ==  after the page has finished loading.
+    ==================================================================
+    -->
+    <script>
+      // Wait for the entire page to be loaded before running any scripts
+      document.addEventListener("DOMContentLoaded", () => {
+        // --- 1. LUCIDE ICON INITIALIZATION ---
+        // This finds all `data-lucide` attributes and replaces them with SVG icons
+        try {
+          lucide.createIcons();
+        } catch (e) {
+          console.error("Lucide icons failed to load:", e);
+        }
+
+        // --- 2. TYPEWRITER ANIMATION LOGIC ---
+        const phrases = [
+          "Initializing FUBK Flow collaboration hub...",
+          "Syncing Academic Calendar...",
+          "Connecting to PeerVerify System...",
+          "Simplifying your daily logistics...",
+        ];
+
+        let currentPhraseIndex = 0;
+        let isDeleting = false;
+        let txt = "";
+        let typeSpeed = 100; // Default typing speed
+        const typewriterElement = document.getElementById("typewriter-text");
+
+        function typeWriter() {
+          // Check if the element exists
+          if (!typewriterElement) {
+            return;
+          }
+
+          const currentPhrase = phrases[currentPhraseIndex];
+
+          // Logic for typing or deleting
+          if (isDeleting) {
+            // Deleting
+            txt = currentPhrase.substring(0, txt.length - 1);
+            typeSpeed = 50; // Speed up deletion
+          } else {
+            // Typing
+            txt = currentPhrase.substring(0, txt.length + 1);
+            typeSpeed = 100; // Normal typing speed
+          }
+
+          // Update the HTML
+          typewriterElement.innerHTML = txt;
+
+          // Logic for state change (when to stop, delete, or move to next phrase)
+          if (!isDeleting && txt === currentPhrase) {
+            // Phrase is fully typed
+            typeSpeed = 2000; // Pause at the end
+            isDeleting = true;
+          } else if (isDeleting && txt === "") {
+            // Phrase is fully deleted
+            isDeleting = false;
+            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length; // Loop
+            typeSpeed = 500; // Pause before typing new phrase
+          }
+
+          // Call the function again after the calculated delay
+          setTimeout(typeWriter, typeSpeed);
+        }
+
+        // Start the typewriter
+        typeWriter();
+      }); // End of DOMContentLoaded
+    </script>
+  </body>
+</html>
